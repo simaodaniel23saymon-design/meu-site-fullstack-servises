@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Fullstack - Desenvolvimento Web Profissional</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <div>
+                <h1>🚀 Serviços Fullstack</h1>
+                <p style="font-size: 1.1rem; margin-top: 0.5rem;">Soluções web completas para seu negócio</p>
+            </div>
+            <div style="text-align: right;">
+                <p style="margin-bottom: 0.5rem;">📞 WhatsApp: <a href="https://wa.me/244951702823" style="color: white; text-decoration: none; font-weight: bold;">+244 951 702 823</a></p>
+                <select id="seletorMoeda" style="padding: 10px 15px; border: none; border-radius: 8px; background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15)); color: white; cursor: pointer; font-weight: 600; border: 2px solid rgba(255,255,255,0.4); font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                    <option value="BRL" style="background: #667eea; color: white;">R$ Reais</option>
+                    <option value="USD" style="background: #667eea; color: white;">$ Dólar</option>
+                    <option value="EUR" style="background: #667eea; color: white;">€ Euro</option>
+                    <option value="AOA" style="background: #667eea; color: white;">Kz Kwanza</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn-solicitar" id="btnSolicitar">Solicitar Serviços</button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Seção de Serviços -->
+        <section>
+            <h2>Nossos Serviços</h2>
+            <div class="painel-servicos" id="servicos-container"></div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section class="sobre">
+            <h2>✨ Sobre Nós</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Somos uma equipe de desenvolvedores e designers apaixonados por criar soluções web inovadoras e de alta qualidade. Com 2 anos de experiência sólida, transformamos ideias em realidade digital.</p>
+                    <ul class="sobre-lista">
+                        <li>✅ Equipe experiente em tecnologias modernas</li>
+                        <li>✅ Projetos entregues no prazo</li>
+                        <li>✅ Suporte pós-projeto garantido</li>
+                        <li>✅ Soluções personalizadas para cada cliente</li>
+                    </ul>
+                </div>
+                <div class="sobre-stats">
+                    <div class="stat">
+                        <h3 id="projetos">150+</h3>
+                        <p>Projetos Completos</p>
+                    </div>
+                    <div class="stat">
+                        <h3 id="clientes">120+</h3>
+                        <p>Clientes Satisfeitos</p>
+                    </div>
+                    <div class="stat">
+                        <h3 id="anos">2+</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Portfólio -->
+        <section class="portfolio">
+            <h2>🎨 Nosso Portfólio</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Veja alguns dos projetos que desenvolvemos</p>
+            <div class="painel-projetos" id="projetos-container">
+                <div class="projeto" data-preco="5000">
+                    <div class="projeto-imagem">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">E-commerce Moderno</div>
+                    </div>
+                    <h3>E-commerce Moderno</h3>
+                    <p>Plataforma de vendas com integração de pagamentos e gestão de estoque</p>
+                    <div class="tech-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="projeto-preco">De R$ 5.000</div>
+                </div>
+
+                <div class="projeto" data-preco="4500">
+                    <div class="projeto-imagem">
+                        <div style="background: linear-gradient(135deg, #f093fb, #f5576c); width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">App Gerenciador</div>
+                    </div>
+                    <h3>App Gerenciador de Tarefas</h3>
+                    <p>Aplicação web para gerenciamento de projetos e equipes</p>
+                    <div class="tech-tags">
+                        <span class="tag">Vue.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <div class="projeto-preco">De R$ 4.500</div>
+                </div>
+
+                <div class="projeto" data-preco="6000">
+                    <div class="projeto-imagem">
+                        <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">Sistema Análise</div>
+                    </div>
+                    <h3>Sistema de Análise de Dados</h3>
+                    <p>Dashboard completo com gráficos e relatórios em tempo real</p>
+                    <div class="tech-tags">
+                        <span class="tag">Angular</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="projeto-preco">De R$ 6.000</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Testemunhos -->
+        <section class="testemunhos">
+            <h2>💬 O que Nossos Clientes Dizem</h2>
+            <div class="painel-testemunhos" id="testemunhos-container">
+                <div class="testemunho">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Excelente trabalho! A equipe foi profissional e entregou tudo no prazo. Recomendo!"</p>
+                    <div class="testemunho-autor">
+                        <strong>Maria Silva</strong>
+                        <span>CEO da TechStart</span>
+                    </div>
+                </div>
+
+                <div class="testemunho">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Transformaram nossa ideia em um produto incrível. A comunicação foi clara durante todo o projeto."</p>
+                    <div class="testemunho-autor">
+                        <strong>João Costa</strong>
+                        <span>Founder da StartupX</span>
+                    </div>
+                </div>
+
+                <div class="testemunho">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <p>"Melhor investimento que fizemos. O site aumentou nossas vendas em 300%!"</p>
+                    <div class="testemunho-autor">
+                        <strong>Ana Pereira</strong>
+                        <span>Gerente de Lojas OnLine</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Chat -->
+        <section class="chat">
+            <h2>💬 Suporte em Tempo Real</h2>
+            <p>Converse conosco e obtenha respostas rápidas sobre seus projetos.</p>
+            <div class="chat-box">
+                <div class="mensagens" id="mensagens-container">
+                    <div class="mensagem bot">
+                        <strong>Suporte:</strong> Olá! 👋 Como podemos ajudar você hoje?
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="text" id="inputMensagem" placeholder="Digite sua mensagem...">
+                    <button class="btn-enviar" id="btnEnviar">Enviar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Solicitação -->
+    <div id="modalSolicitacao" class="modal">
+        <div class="modal-content">
+            <button class="btn-close" id="btnFecharModal">×</button>
+            <h2>Solicitar Serviços</h2>
+            <form id="formularioSolicitacao">
+                <div class="form-group">
+                    <label for="nome">Nome *</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone">
+                </div>
+                <div class="form-group">
+                    <label for="servico">Serviço *</label>
+                    <select id="servico" required>
+                        <option value="">Selecione um serviço</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição do Projeto *</label>
+                    <textarea id="descricao" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chat Flutuante -->
+    <div class="chat-flutuante">
+        <button id="btnSuporte" class="btn-suporte" title="Abrir chat de suporte">
+            💬
+        </button>
+        <div id="chatWindow" class="chat-window">
+            <div class="chat-header">
+                <div>
+                    <h3>🎧 Suporte Técnico</h3>
+                    <small style="opacity: 0.9;">Responde em até 2 minutos</small>
+                </div>
+                <button id="closeChat" class="close">&times;</button>
+            </div>
+            <div id="chatMensagensFluo" class="chat-mensagens">
+                <div class="msg bot">
+                    <div class="msg-conteudo">
+                        👋 Olá! Como posso ajudá-lo?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInputFluo" placeholder="Digite sua mensagem...">
+                <button id="btnEnviarChatFluo">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre</h3>
+                <ul>
+                    <li><a href="#sobre">Quem Somos</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="mailto:contato@fullstack.com">contato@fullstack.com</a></li>
+                    <li><a href="https://wa.me/244951702823" target="_blank">📱 WhatsApp: +244 951 702 823</a></li>
+                    <li>Luanda, Angola</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">GitHub</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Serviços Fullstack. Todos os direitos reservados.</p>
+            <p>Desenvolvido com ❤️</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
